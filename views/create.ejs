@@ -1,0 +1,27 @@
+<%- include('./header') %>
+  <div class="container">
+    <%- include('./navigation') %>
+    <%- include('./notification') %>
+
+    <div style="margin: 20px 0 20px 0;">
+      <form enctype="multipart/form-data" method="post">
+        <div class="form-group">
+          <label for="inputTitle">标题:</label>
+          <input type="text" name="title" class="form-control" id="inputTitle" placeholder="用户名" required autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="inputContent">内容:</label>
+          <textarea class="form-control" name="content" rows="15" id="inputContent"></textarea>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">发布</button>
+      </form>
+    <div>
+
+    <hr>
+    <footer>
+      <p>&copy; 2017 Company, Inc.</p>
+    </footer>
+  </div> <!-- /container -->
+<%- include('./footer') %>

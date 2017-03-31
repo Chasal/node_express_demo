@@ -1,0 +1,15 @@
+<div class="form-group" style="margin-bottom: 60px;">
+  <div class="form-group" style="float: left;">
+    <img src="/images/<%= post.author.avatar %>" alt="" class="img-circle" width="36" height="36">
+  </div>
+  <div class="form-group" style="margin-left: 60px;">
+    <h4><a href="/posts/<%= post._id %>"><%= post.title %></a></h4>
+    <pre><%- post.content %></pre>
+  </div>
+  <% if (user && post.author._id && user._id.toString() === post.author._id.toString()) { %>
+    <div class="form-group" style="float: right;">
+      <label class="form-label-reset"><a href="/posts/<%= post._id %>/edit">编辑</a></label>
+      <label class="form-label-reset"><a href="/posts/<%= post._id %>/remove">删除</a></label>
+    </div>
+  <% } %>
+</div>
